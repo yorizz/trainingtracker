@@ -1,0 +1,15 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirect explicit legacy URLs, but leave internal rewrites alone.
+RewriteCond %{THE_REQUEST} \s/+trainingtracker/(?:public(?:/|[?\s])|index\.php(?:/|[?\s])) [NC]
+RewriteRule ^(?:public/?(?:index\.php/?)?|index\.php/?)(.*)$ /trainingtracker/$1 [R=308,L]
+
+# Never expose private project files through the project root.
+RewriteRule (^|/)\. - [F,END]
+RewriteRule ^(?:app|vendor|writable|tests)(?:/|$) - [F,END,NC]
+
+# Serve existing public assets; send every other request to CodeIgniter.
+RewriteCond %{DOCUMENT_ROOT}/trainingtracker/public/$1 -f
+RewriteRule ^(.+)$ public/$1 [END]
+RewriteRule ^ public/index.php [END]

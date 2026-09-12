@@ -1,6 +1,9 @@
 # Disable directory browsing
 Options -Indexes
 
+# Use the application entry point for directory requests.
+DirectoryIndex index.php
+
 # ----------------------------------------------------------------------
 # Rewrite engine
 # ----------------------------------------------------------------------
@@ -10,6 +13,10 @@ Options -Indexes
 <IfModule mod_rewrite.c>
 	Options +FollowSymlinks
 	RewriteEngine On
+
+	# Redirect browser requests for the public directory to the clean app URL.
+	RewriteCond %{THE_REQUEST} \s/+trainingtracker/public(?:[/\s?]) [NC]
+	RewriteRule ^(?:index\.php/?)?(.*)$ /trainingtracker/$1 [R=308,L]
 
 	# If you installed CodeIgniter in a subfolder, you will need to
 	# change the following line to match the subfolder you need.

@@ -3,10 +3,9 @@
 use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
-$routes->get('/', 'Home::index');
-
 
 $routes->get('/', 'Dashboard::index');
+$routes->get('dashboard', 'Dashboard::index');
 
 $routes->get('training', 'Training::session');
 $routes->get('training/(:segment)', 'Training::session/$1');
