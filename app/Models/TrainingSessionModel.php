@@ -12,6 +12,7 @@ class TrainingSessionModel extends Model
     protected $allowedFields = [
         'training_group_id',
         'session_date',
+        'completed_at',
     ];
 
     protected $useTimestamps = true;

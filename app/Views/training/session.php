@@ -49,6 +49,17 @@ $absentCount = count(array_filter(
     <?php endforeach ?>
 </div>
 
+<form action="<?= site_url('training/complete') ?>" method="post" class="mt-4">
+    <input type="hidden" name="session_date" value="<?= esc($sessionDate) ?>">
+    <?php $isFutureSession = $sessionDate > date('Y-m-d'); ?>
+
+    <?php $isFutureSession = $sessionDate > date('Y-m-d'); ?>
+
+    <button type="submit" class="btn btn-dark w-100 py-3 fw-semibold" <?= $isFutureSession ? 'disabled' : '' ?>>
+        Done
+    </button>
+</form>
+
 <?php if (empty($players)): ?>
 
 <div class="alert alert-light border">

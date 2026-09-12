@@ -23,6 +23,7 @@ class Dashboard extends BaseController
 
         $sessions = $trainingSessionModel
             ->where('training_group_id', 1)
+            ->where('completed_at !=', null)
             ->where('session_date <=', date('Y-m-d'))
             ->orderBy('session_date', 'DESC')
             ->findAll(4);
