@@ -124,3 +124,15 @@ _modules/*
 
 /results/
 /phpunit.xml
+
+
+#-------------------------
+# Local Database Files / Dumps
+#-------------------------
+*.sql
+*.sqlite
+*.sqlite3
+
+# Local development cruft
+*.log
+*.tmp
