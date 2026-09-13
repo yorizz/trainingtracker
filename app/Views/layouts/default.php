@@ -11,6 +11,11 @@
 
     <link rel="stylesheet" href="<?= base_url('assets/css/trainingtracker.css') ?>">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/img/app_icons/apple-touch-icon.png'); ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/img/app_icons/favicon-32x32.png'); ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/img/app_icons/favicon-16x16.png'); ?>">
+    <link rel="manifest" href="<?= base_url('assets/img/app_iconssite.webmanifest'); ?>">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer>
     </script>
 

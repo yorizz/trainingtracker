@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Training Tracker icon</title>
+  <desc id="desc">Rounded blue frame with three green check marks and one red X.</desc>
+
+  <rect x="56" y="56" width="400" height="400" rx="92"
+        fill="none" stroke="#2a80b9" stroke-width="56"/>
+
+  <g fill="none" stroke="#16713f" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M130 174 L166 210 L226 144"/>
+    <path d="M286 174 L322 210 L382 144"/>
+    <path d="M130 326 L166 362 L226 296"/>
+  </g>
+
+  <g fill="none" stroke="#ef2f2f" stroke-width="30" stroke-linecap="round">
+    <path d="M296 304 L374 382"/>
+    <path d="M374 304 L296 382"/>
+  </g>
+</svg>
