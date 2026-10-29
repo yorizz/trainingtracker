@@ -136,3 +136,6 @@ _modules/*
 # Local development cruft
 *.log
 *.tmp
+
+# custom
+/reset_password.txt
